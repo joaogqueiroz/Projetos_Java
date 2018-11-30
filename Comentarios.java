@@ -9,7 +9,7 @@ package fundamentos;
  * 
  */
 
-public class Comentários {
+public class Comentarios {
 	public static void main(String[] args) {
 		/** Imprime no console a palavra 'Primeiro' e em seguida pula para proxima linha
 		 * 
