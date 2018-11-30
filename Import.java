@@ -1,6 +1,5 @@
 package fundamentos;
 
-import java.awt.Button;
 import java.util.Date;
 
 public class Import {
