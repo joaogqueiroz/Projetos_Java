@@ -8,5 +8,6 @@ public class Cotinue {
 			}
 			System.out.println(i);
 		}
+		System.out.println("fim"); 
 	}
 }
