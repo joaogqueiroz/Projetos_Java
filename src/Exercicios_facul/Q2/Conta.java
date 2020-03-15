@@ -51,4 +51,10 @@ public class Conta {
         saldo += valor;
         //saldo = saldo + valor;
     }
+    
+    public void remover(int numero, double valor) {
+    	this.numero = (Integer) null;
+        this.saldo = (Double) null;
+        this.status = false;
+    }
 }

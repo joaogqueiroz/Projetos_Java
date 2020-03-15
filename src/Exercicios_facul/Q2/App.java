@@ -1,8 +1,10 @@
 package Exercicios_facul.Q2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
-import Exercicios_facul.POO.src.poo.Conta;
 
 public class App {
 
@@ -27,7 +29,9 @@ public class App {
             System.out.println("3-Depositar");
             System.out.println("4-Listar saldo das Contas");
             System.out.println("5-Sair");
-            System.out.println("Digite sua opção: ");
+            System.out.println("6-Remover");
+            System.out.println("7-Consultar saldo");
+            System.out.println("Digite sua operacao: ");
             op = tecla.nextInt(); 
             switch(op){
                 case 1: incluirConta(); break;
@@ -35,6 +39,8 @@ public class App {
                 case 3: depositarValor(); break;    
                 case 4: listarContas(); break;
                 case 5: break;
+                case 6: remover(); break;
+                case 7:consultaSaldo(); break;
             }
         } while (op!=5);       
     }
@@ -85,7 +91,7 @@ public class App {
     
     public static void listarContas(){
         double total = 0;
-        System.out.println("Nº Conta:........ SALDO:");
+        System.out.println("N� Conta:........ SALDO:");
         for (int i = 0; i < lista.length-1; i++) {
             if (lista[i] != null){
                 System.out.println(lista[i].getNumero()
@@ -99,6 +105,28 @@ public class App {
         }
         System.out.println("Total:........" + total);
     }
+   
+   
     
+    public static void consultaSaldo(){
+    	System.out.println("Digite o numero da conta:");
+    	int num = tecla.nextInt();
+        for (int i = 0; i < lista.length-1; i++) {
+            if (num == lista[i].getNumero()){
+            	System.out.println("Saldo para da conta: "+lista[i].getSaldo());
+                break;
+            }
+        }
+    }
     
+    public static void remover(){
+    	System.out.println("Digite o numero da conta:");
+    	int num = tecla.nextInt();
+        for (int i = 0; i < lista.length-1; i++) {
+            if (num == lista[i].getNumero()){
+            	lista[i].remover(num, lista[i].getSaldo());;
+                break;
+            }
+        }
+    } 
 }
