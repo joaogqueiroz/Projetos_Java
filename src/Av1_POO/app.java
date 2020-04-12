@@ -8,17 +8,13 @@ import java.util.Scanner;
 
 public class app  {
    
-
-    //variável comum
     static int index = 0;
-
     //Estrutura de dados ArrayList Genérica
     static List<pessoa> lista = new ArrayList<pessoa>();
    
     static Scanner tecla = new Scanner(System.in);
 
     public static  void main(String[] args) {
-    	//cachePessoa cache = new cachePessoa();
         int op;
         do {                
             System.out.println("*** MENU PRINCIPAL ***");
@@ -38,7 +34,6 @@ public class app  {
             }
         } while (op!=5);       
     }
-    
     
     public static void incluirpessoa(){
         //Entrada
@@ -92,22 +87,4 @@ public class app  {
             
     	
     	}
-
-    	
-  /*  public static void consultarpessoas(){
-    	 //Entrada
-    	//cachePessoa cache = new cachePessoa();
-        System.out.println("Digite o id da pessoa:");
-        int id = tecla.nextInt();
-        System.out.println("Nome-------Idade");
-        //cache.setId(1);
-        int flag = cache.retornaPessoa(id);
-        System.out.println(flag);
-        	if(flag == 0) {
-        		System.out.println(lista.get(id));
-        		String nomec =lista.get(id).getNome();
-        		int idadec = lista.get(id).getIdade();
-        		cache.cacheCad(nomec, idadec, id);
-        		}
-    }*/
 }    
